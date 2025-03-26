@@ -1,7 +1,5 @@
 .cards {
   padding-top: 20px;
-  max-width: 1280px;
-  max-height: 970px;
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
 
@@ -9,8 +7,8 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 413px);
+  gap: 40px 20px;
   list-style-type: none;
 }
