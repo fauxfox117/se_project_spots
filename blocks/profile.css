@@ -27,18 +27,14 @@
 }
 
 .profile__add-btn {
-  display: block;
-  align-items: baseline;
+  display: flex;
   margin-left: auto;
+  margin-top: auto;
   max-width: 149px;
   max-height: 52px;
   padding: 18px 32px;
   gap: 8px;
   border-radius: 8px;
   background: rgba(33, 33, 33, 1);
-  font-family: Poppins;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  color: rgba(252, 245, 229, 1);
 }
