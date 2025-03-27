@@ -1,9 +1,10 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
 }
 
 .footer__copyright {
-  width: 104px;
-  height: 16px;
-  margin: auto 668px 60px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }

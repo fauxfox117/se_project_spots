@@ -28,6 +28,7 @@
 
 .profile__add-btn {
   display: flex;
+  align-items: center;
   margin-left: auto;
   margin-top: auto;
   max-width: 149px;
