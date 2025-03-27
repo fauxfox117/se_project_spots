@@ -14,12 +14,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 48px;
+}
+
+.card__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .card__like-btn {
-  background-image: url(../images/like.svg);
+  background-image: url(../images/like.png);
   width: 23px;
   height: 20px;
-  opacity: 40%;
+  opacity: 0.4;
   border: none;
+}
+
+.card__like-btn:hover {
+  opacity: 1;
 }

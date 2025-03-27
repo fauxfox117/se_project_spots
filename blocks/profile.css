@@ -16,26 +16,56 @@
 
 .profile__name {
   margin: 0 0 12px;
+  font-weight: 500;
 }
 
 .profile__description {
   margin: 0;
+  font-weight: 500;
+  opacity: 0.7;
 }
 
 .profile__edit-btn {
   margin-top: auto;
+  background-color: transparent;
+  border-style: none;
+  gap: 8px;
+  font-weight: 500;
+  display: flex;
+  justify-content: left;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.profile__edit-btn:hover {
+  color: rgba(33, 33, 33, 1);
+}
+
+.profile__edit-btn img {
+  opacity: 0.7;
+}
+
+.profile__edit-btn:hover img {
+  opacity: 1;
 }
 
 .profile__add-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
+  border-style: none;
   margin-left: auto;
   margin-top: auto;
   max-width: 149px;
   max-height: 52px;
+  font-weight: 500;
   padding: 18px 32px;
   gap: 8px;
   border-radius: 8px;
   background: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
+  white-space: nowrap;
+}
+
+.profile__add-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
 }

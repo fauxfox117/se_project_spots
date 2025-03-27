@@ -1,10 +1,13 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin: 0 auto 60px;
+  margin: 0 auto;
 }
 
 .footer__copyright {
+  margin: 0;
   display: flex;
   justify-content: center;
+  color: rgba(33, 33, 33, 0.7);
+  font-weight: 400;
 }
