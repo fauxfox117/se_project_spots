@@ -47,6 +47,7 @@
 
   .card__like-btn img {
     background-size: contain;
+    background-repeat: no-repeat;
     width: 20px;
     height: 18px;
   }
