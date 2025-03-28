@@ -5,6 +5,8 @@
 }
 
 .profile__avatar {
+  height: 190px;
+  width: 190px;
   margin-right: 20px;
   border-radius: 8px;
 }
@@ -76,4 +78,35 @@
 
 .profile__add-btn:hover {
   background-color: rgba(33, 33, 33, 0.8);
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 0 12px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .profile__edit-btn {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 32px auto 20px;
+    justify-content: center;
+  }
+
+  .profile__add-btn {
+    margin: 0;
+  }
 }
