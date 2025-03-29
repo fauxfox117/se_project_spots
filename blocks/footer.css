@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin: 20px 0 auto;
+  padding: 60px 0;
 }
 
 .footer__copyright {
