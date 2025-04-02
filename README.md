@@ -36,6 +36,6 @@ Spots is a responsive social media web application that allows users to share an
  ![Spots_Web_SS](https://github.com/user-attachments/assets/db8a7a47-1e7f-4017-b7d7-030d091137b6)
 <img width="321" alt="Spots_Mobile_SS" src="https://github.com/user-attachments/assets/c0834b78-3e71-4d01-b571-83127a35812d" />
 
--link to my video - 
+-link to my video - https://vimeo.com/1071660590?share=copy
 
 
