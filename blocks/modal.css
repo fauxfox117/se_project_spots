@@ -1,0 +1,49 @@
+.modal {
+}
+
+.modal_is-opened {
+}
+
+.modal__container {
+}
+
+.modal__close-btn {
+}
+
+.modal__heading {
+}
+
+.modal__form {
+}
+
+.modal__input {
+}
+
+.modal__submit-btn {
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+  }
+
+  .modal_is-opened {
+  }
+
+  .modal__container {
+  }
+
+  .modal__close-btn {
+  }
+
+  .modal__heading {
+  }
+
+  .modal__form {
+  }
+
+  .modal__input {
+  }
+
+  .modal__submit-btn {
+  }
+}
