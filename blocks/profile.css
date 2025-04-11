@@ -44,19 +44,11 @@
   color: #212121;
 }
 
-.profile__edit-button::before {
-  content: "Pencil Icon";
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/pencil.svg);
-  gap: 8px;
-  opacity: 0.7;
-}
-
 .profile__edit-btn {
   margin-top: auto;
   background-color: transparent;
   border-style: none;
+  gap: 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
