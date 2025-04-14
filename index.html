@@ -47,7 +47,11 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-btn"></button>
+                <button
+                  type="button"
+                  class="card__like-btn"
+                  alt="heart shaped like button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -58,7 +62,11 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Restaurant Terrace</h2>
-                <button type="button" class="card__like-btn"></button>
+                <button
+                  type="button"
+                  class="card__like-btn"
+                  alt="heart shaped like button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -69,7 +77,11 @@
               />
               <div class="card__content">
                 <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-btn"></button>
+                <button
+                  type="button"
+                  class="card__like-btn"
+                  alt="heart shaped like button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -80,7 +92,11 @@
               />
               <div class="card__content">
                 <h2 class="card__title">A very long bridge, over the forest</h2>
-                <button type="button" class="card__like-btn"></button>
+                <button
+                  type="button"
+                  class="card__like-btn"
+                  alt="heart shaped like button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -91,7 +107,11 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-btn"></button>
+                <button
+                  type="button"
+                  class="card__like-btn"
+                  alt="heart shaped like button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -102,7 +122,11 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-btn"></button>
+                <button
+                  type="button"
+                  class="card__like-btn"
+                  alt="heart shaped like button"
+                ></button>
               </div>
             </li>
           </ul>
@@ -113,13 +137,18 @@
       </footer>
       <div class="modal modal_is-opened">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            alt="close button"
+          ></button>
           <h2 class="modal__title">Edit Profile</h2>
           <form class="modal__form">
             <label for="profile-name-input" class="modal__label">
               Name
               <input
-                type="profile-name-input"
+                id="profile-name-input"
+                type="text"
                 class="modal__input"
                 placeholder="Type your name"
               />
@@ -128,9 +157,42 @@
               Description
 
               <input
-                type="profile-description-input"
+                id="profile-description-input"
+                type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button
+            type="button"
+            class="modal__close-btn"
+            alt="close button"
+          ></button>
+          <h2 class="modal__title">New Post</h2>
+          <form class="modal__form">
+            <label for="card-image-input" class="modal__label">
+              Image Link
+              <input
+                id="card-image-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Caption
+
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
