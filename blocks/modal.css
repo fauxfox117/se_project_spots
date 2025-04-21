@@ -106,25 +106,9 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal {
-  }
-
-  .modal_is-opened {
-  }
-
-  .modal__container {
-  }
-
   .modal__close-btn {
-  }
-
-  .modal__heading {
-  }
-
-  .modal__form {
-  }
-
-  .modal__input {
+    position: absolute;
+    top: 25px;
   }
 
   .modal__submit-btn {
