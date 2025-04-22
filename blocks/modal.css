@@ -1,35 +1,37 @@
 .modal {
   visibility: hidden;
   position: fixed;
-  background-color: #00000080;
+  background-color: rgba(0, 0, 0, 0.5);
   inset: 0;
-  width: 100vw;
+
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   opacity: 0;
-  transform: translateY(-100px);
-  transition: visibility 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+  transition: visibility 0.6s ease, opacity 0.6s ease;
 }
 
 .modal_is-opened {
   visibility: visible;
-  transform: translateY(0px);
   opacity: 1;
 }
 
 .modal__container {
   position: relative;
   max-width: 730px;
+  max-height: 408px;
+  height: 100%;
   width: 100%;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
   padding: 32px 50px;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
+  cursor: pointer;
   background-image: url(../images/close.svg);
   background-color: transparent;
   background-repeat: no-repeat;
@@ -50,7 +52,12 @@
 }
 
 .modal__title {
+  font-weight: 500;
+  font-size: 32px;
   margin: 0 0 32px;
+  color: rgba(33, 33, 33, 1);
+  line-height: 1;
+  max-width: 169px;
 }
 
 .modal__form {
@@ -64,26 +71,32 @@
   width: 100%;
   height: 52px;
   border-radius: 8px;
-  border-color: #212121;
-  opacity: 0.4;
+  border-color: rgba(33, 33, 33, 0.4);
   outline: none;
 }
 
 .modal__input:hover {
-  opacity: 1;
   cursor: pointer;
-  border-color: #212121;
+  border-color: rgba(33, 33, 33, 1);
 }
 
 .modal__input::placeholder {
-  color: #2121214d;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110.00000000000001%;
+  color: rgba(33, 33, 33, 0.3);
 }
 
 .modal__label {
   margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110.00000000000001%;
+  color: rgba(33, 33, 33, 0.7);
 }
 
 .modal__submit-btn {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   border-style: none;
@@ -110,9 +123,18 @@
 }
 
 @media screen and (max-width: 627px) {
+  .modal {
+    padding: 12px;
+  }
+
+  .modal__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+  }
+
   .modal__close-btn {
-    position: absolute;
-    top: 25px;
+    top: 22.6px;
   }
 
   .modal__submit-btn {
