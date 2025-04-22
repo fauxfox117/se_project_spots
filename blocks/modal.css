@@ -2,18 +2,22 @@
   visibility: hidden;
   position: fixed;
   background-color: #00000080;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: visibility 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
 .modal_is-opened {
   visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .modal__container {
