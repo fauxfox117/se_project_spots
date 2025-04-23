@@ -56,7 +56,7 @@ function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileName.value;
   profileDescriptionEl.textContent = editProfileDescription.value;
-  closeModal;
+  closeModal(editProfileModal);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -78,7 +78,7 @@ function handleNewPostSubmit(evt) {
   */
 
   newPostForm.reset();
-  closeModal;
+  closeModal(newPostModal);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
