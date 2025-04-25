@@ -18,7 +18,7 @@
 
 .modal__container {
   position: relative;
-  margin-top: 207px;
+  margin: auto;
   max-width: 730px;
   width: 100%;
   border-radius: 8px;
@@ -69,9 +69,10 @@
   line-height: 1;
   height: 52px;
   border-radius: 8px;
-  border-color: #212121;
+  border-color: rgba(33, 33, 33, 0.4);
   outline: none;
   box-sizing: border-box;
+  padding: 16px 12px;
 }
 
 .modal__input:hover {
@@ -129,7 +130,6 @@
 
   .modal__title {
     font-size: 20px;
-    margin: 10px 0 10px 0;
   }
 
   .modal__form {
@@ -138,6 +138,7 @@
   .modal__input {
     font-size: 16px;
     width: 100%;
+    border-style: none;
   }
 
   .modal__close-btn {
