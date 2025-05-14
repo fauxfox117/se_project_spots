@@ -112,15 +112,13 @@ function handleNewPostSubmit(evt) {
     console.log("Please enter a valid URL");
     return;
   }
-  console.log("New Post Link:", newPostLink.value);
-  console.log("New Post Description:", newPostDescription.value);
 
-  /*      below is commented for future implementation
+  const cardElement = getCardElement({
+    name: newPostDescription.value,
+    link: newPostLink.value,
+  });
 
-  cardImage.textContent = newPostLink.value;
-  cardDescription.textContent = newPostDescription.value;
-
-  */
+  cardsList.prepend(cardElement);
 
   newPostForm.reset();
   closeModal(newPostModal);
