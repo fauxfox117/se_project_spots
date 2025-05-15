@@ -41,6 +41,11 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostLink = newPostModal.querySelector("#card-image-input");
 const newPostDescription = newPostModal.querySelector("#card-caption-input");
 
+const previewModal = document.querySelector("#preview-post-modal");
+const previewImage = previewModal.querySelector(".modal__preview-image");
+const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
+const previewTitle = previewModal.querySelector(".modal__preview-title");
+
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
@@ -52,9 +57,21 @@ function getCardElement(data) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
 
   cardLikeBtn.addEventListener("click", function () {
     cardLikeBtn.classList.toggle("card__like-btn-active");
+  });
+
+  cardDeleteBtn.addEventListener("click", function () {
+    cardDeleteBtn.closest(".card").remove();
+  });
+
+  cardImageEl.addEventListener("click", function () {
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    previewTitle.textContent = data.name;
+    openModal(previewModal);
   });
 
   cardImageEl.src = data.link;
@@ -63,15 +80,6 @@ function getCardElement(data) {
 
   return cardElement;
 }
-
-/*      below is commented for future implementation
-
-
-const cardImage = document.querySelector(".card__image");
-const cardDescription = document.querySelector(".card__title");
-
-
-*/
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
@@ -100,6 +108,10 @@ newPostBtn.addEventListener("click", function () {
 
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
+});
+
+previewCloseBtn.addEventListener("click", function () {
+  closeModal(previewModal);
 });
 
 function handleEditProfileSubmit(evt) {
