@@ -35,15 +35,12 @@
   border-radius: 8px;
   padding: 32px 50px;
   box-sizing: border-box;
+  max-width: 90vw;
 }
 
 .modal__close-btn {
   cursor: pointer;
-  background-image: url(../images/close.svg);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background: transparent url(../images/close.svg) center no-repeat;
   border-style: none;
   position: absolute;
   top: 25px;
@@ -51,6 +48,11 @@
   width: 40px;
   height: 40px;
   opacity: 0.4;
+
+  transition: 0.3s;
+
+  padding: 0;
+  margin: 0;
 }
 
 .modal__close-btn:hover {
@@ -148,26 +150,17 @@
 }
 
 .modal__close_type_preview {
-  cursor: pointer;
-  background-image: url(../images/close.svg);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  border-style: none;
-  position: absolute;
-  filter: invert(1);
   color: #fff;
-  opacity: 1;
-  width: 40px;
-  height: 40px;
-  right: 95px;
-  border-radius: 8px;
+  filter: invert(1);
+  right: -40px;
+  top: -40px;
 }
 
 .modal__close_type_preview:hover {
   filter: invert(1);
   opacity: 0.4;
+  top: 0;
+  right: -52.5px;
 }
 
 .modal__preview-title {

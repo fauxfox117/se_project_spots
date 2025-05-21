@@ -42,7 +42,7 @@ const newPostLink = newPostModal.querySelector("#card-image-input");
 const newPostDescription = newPostModal.querySelector("#card-caption-input");
 
 const previewModal = document.querySelector("#preview-post-modal");
-const previewImage = previewModal.querySelector(".modal__preview-image");
+const previewImage = previewModal.querySelector(".modal__image");
 const previewCloseBtn = previewModal.querySelector(
   ".modal__close_type_preview"
 );

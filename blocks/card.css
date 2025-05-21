@@ -62,6 +62,7 @@
 }
 
 .card__delete-btn {
+  cursor: pointer;
   position: absolute;
   top: 18px;
   right: 15px;
