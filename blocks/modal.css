@@ -31,9 +31,7 @@
   position: relative;
   margin: auto;
   max-width: 730px;
-  width: 100%;
   border-radius: 8px;
-  padding: 32px 50px;
   box-sizing: border-box;
   max-width: 90vw;
 }
@@ -153,7 +151,7 @@
   color: #fff;
   filter: invert(1);
   right: -40px;
-  top: -40px;
+  top: -9px;
 }
 
 .modal__close_type_preview:hover {
@@ -201,7 +199,7 @@
   }
 
   .modal__close_type_preview {
-    right: 45px;
-    top: -5px;
+    right: -5px;
+    top: -35px;
   }
 }
