@@ -157,8 +157,6 @@
 .modal__close_type_preview:hover {
   filter: invert(1);
   opacity: 0.4;
-  top: 0;
-  right: -52.5px;
 }
 
 .modal__preview-title {
