@@ -1,6 +1,7 @@
 const showInputError = (formEl, inputEl, errorMsg) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
+  inputEl.classList.add("modal__input_state_error");
 };
 
 const hideInputError = (formEl, inputEl) => {
@@ -22,9 +23,9 @@ const setEventListeners = (formEl) => {
 
   // toggleButtonState(inputList, buttonElement);
 
-  inputList.forEach((inputElement) => {
+  inputList.forEach((inputEl) => {
     inputElement.addEventListener("input", function () {
-      checkInputValidity(formEl, inputElement);
+      checkInputValidity(formEl, inputEl);
       // toggleButtonState(inputList, buttonElement);
     });
   });
