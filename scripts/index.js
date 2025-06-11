@@ -87,6 +87,10 @@ function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
 
+document.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") closeModal(previewModal);
+});
+
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
@@ -141,6 +145,11 @@ function handleNewPostSubmit(evt) {
 
   newPostForm.reset();
   closeModal(newPostModal);
+}
+
+function disableButton(buttonElement, config) {
+  buttonElement.classList.add(config.inactiveButtonClass);
+  buttonElement.disabled = true;
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);

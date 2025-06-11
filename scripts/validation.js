@@ -1,4 +1,4 @@
-const settings = {
+const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -39,7 +39,7 @@ const toggleButtonState = (inputList, buttonEl) => {
     buttonEl.classList.add(config.inactiveButtonClass);
   } else {
     buttonEl.disabled = false;
-    buttonEl.classList.remove(config.inactiveButtonClass);
+    buttonEl.classList.remove(config.in);
   }
 };
 
@@ -64,4 +64,6 @@ const enableValidation = (config) => {
   });
 };
 
-enableValidation(settings);
+enableValidation(config);
+
+resetValidation(config);
