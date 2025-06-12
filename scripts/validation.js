@@ -65,5 +65,3 @@ const enableValidation = (config) => {
 };
 
 enableValidation(config);
-
-resetValidation(config);

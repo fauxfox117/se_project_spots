@@ -88,7 +88,10 @@ function openModal(modal) {
 }
 
 document.addEventListener("keydown", function (evt) {
-  if (evt.key === "Escape") closeModal(previewModal);
+  if (evt.key === "Escape")
+    closeModal(previewModal),
+      closeModal(editProfileModal),
+      closeModal(newPostModal);
 });
 
 function closeModal(modal) {
