@@ -46,6 +46,8 @@ const previewImage = previewModal.querySelector(".modal__image");
 const previewCloseBtn = previewModal.querySelector(
   ".modal__close_type_preview"
 );
+console.log(previewCloseBtn);
+
 const previewTitle = previewModal.querySelector(".modal__preview-title");
 
 const cardTemplate = document
@@ -92,6 +94,12 @@ document.addEventListener("keydown", function (evt) {
     closeModal(previewModal),
       closeModal(editProfileModal),
       closeModal(newPostModal);
+});
+
+document.addEventListener("click", function (evt) {
+  if (evt.target === previewModal) closeModal(previewModal);
+  if (evt.target === newPostModal) closeModal(newPostModal);
+  if (evt.target === editProfileModal) closeModal(editProfileModal);
 });
 
 function closeModal(modal) {
