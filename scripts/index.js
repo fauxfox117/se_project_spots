@@ -25,6 +25,7 @@ const initialCards = [
   },
 ];
 
+//Edit Profile
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -34,26 +35,27 @@ const editProfileDescription = editProfileModal.querySelector(
   "#profile-description-input"
 );
 
+//New Post
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostLink = newPostModal.querySelector("#card-image-input");
 const newPostDescription = newPostModal.querySelector("#card-caption-input");
+const newSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 
+//Preview Image
 const previewModal = document.querySelector("#preview-post-modal");
 const previewImage = previewModal.querySelector(".modal__image");
 const previewCloseBtn = previewModal.querySelector(
   ".modal__close_type_preview"
 );
-console.log(previewCloseBtn);
-
 const previewTitle = previewModal.querySelector(".modal__preview-title");
 
+// Card Elements
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
-
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
@@ -112,6 +114,7 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 editProfileBtn.addEventListener("click", function () {
   editProfileName.value = profileNameEl.textContent;
   editProfileDescription.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileModal, [editProfileName, editProfileDescription]);
   openModal(editProfileModal);
 });
 
@@ -153,14 +156,8 @@ function handleNewPostSubmit(evt) {
   });
 
   cardsList.prepend(cardElement);
-
   newPostForm.reset();
   closeModal(newPostModal);
-}
-
-function disableButton(buttonElement, config) {
-  buttonElement.classList.add(config.inactiveButtonClass);
-  buttonElement.disabled = true;
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
