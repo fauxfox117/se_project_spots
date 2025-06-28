@@ -138,7 +138,28 @@
   position: relative;
 }
 
-.modal__submit-btn-disabled {
+.modal__submit-btn_disabled {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-style: none;
+  align-items: center;
+  border-style: none;
+  margin-left: 0;
+  margin-top: auto;
+  max-width: 156px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 18px 32px;
+  gap: 8px;
+  border-radius: 8px;
+  background: rgba(33, 33, 33, 1);
+  color: rgba(252, 245, 229, 1);
+  white-space: nowrap;
+  position: relative;
+  pointer-events: none;
   opacity: 0.5;
 }
 
