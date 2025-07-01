@@ -58,6 +58,11 @@ const cardTemplate = document
   .content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
 
+const profileNameEl = document.querySelector(".profile__name");
+const profileDescriptionEl = document.querySelector(".profile__description");
+
+const modals = document.querySelectorAll(".modal");
+
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__title");
@@ -104,7 +109,6 @@ function closeModal(modal) {
   document.removeEventListener("keydown", handleEscape);
 }
 
-const modals = document.querySelectorAll(".modal");
 modals.forEach((modal) => {
   modal.addEventListener("click", (evt) => {
     if (evt.target === modal) {
@@ -113,13 +117,14 @@ modals.forEach((modal) => {
   });
 });
 
-const profileNameEl = document.querySelector(".profile__name");
-const profileDescriptionEl = document.querySelector(".profile__description");
-
 editProfileBtn.addEventListener("click", function () {
   editProfileName.value = profileNameEl.textContent;
   editProfileDescription.value = profileDescriptionEl.textContent;
-  resetValidation(editProfileModal, [editProfileName, editProfileDescription]);
+  resetValidation(
+    editProfileModal,
+    [editProfileName, editProfileDescription],
+    config
+  );
   openModal(editProfileModal);
 });
 
@@ -160,11 +165,10 @@ function handleNewPostSubmit(evt) {
     link: newPostLink.value,
   });
 
-  resetValidation(newPostForm, [newPostLink, newPostDescription], config);
-
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
   newPostForm.reset();
+  disableButton(evt.submitter, settings);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
