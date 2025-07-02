@@ -168,7 +168,7 @@ function handleNewPostSubmit(evt) {
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
   newPostForm.reset();
-  disableButton(evt.submitter, settings);
+  disableButton(evt.submitter, config);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
