@@ -1,0 +1,19 @@
+{
+  "name": "se_project_spots",
+  "version": "1.0.0",
+  "description": "Project 3: Spots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fauxfox117/se_project_spots.git"
+  },
+  "author": "Steven Bolin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fauxfox117/se_project_spots/issues"
+  },
+  "homepage": "https://github.com/fauxfox117/se_project_spots#readme"
+}
