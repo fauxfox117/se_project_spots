@@ -47,7 +47,7 @@ function disableButton(buttonEl, config) {
   buttonEl.disabled = true;
 }
 
-const resetValidation = (formEl, inputList, config) => {
+function resetValidation = (formEl, inputList, config) => {
   inputList.forEach((input) => {
     hideInputError(formEl, input, config);
   });

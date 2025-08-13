@@ -7,7 +7,7 @@ const initialCards = [
   },
   {
     name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/softrware-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
   },
   {
     name: "An outdoor cafe",
