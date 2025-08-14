@@ -1,4 +1,11 @@
-import { enableValidation, config } from "./validation.js";
+import "./index.css";
+import { enableValidation, config } from "../scripts/validation.js";
+
+// import profilePhoto from "../images/avatar.jpg";
+// import profileLogo from "./images/logo.svg";
+// import profileEdit from "../images/pencil.svg";
+// import profileTrash from "../images/trash.svg";
+// import profileLike from "../images/like.svg";
 
 const initialCards = [
   {
@@ -7,7 +14,7 @@ const initialCards = [
   },
   {
     name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/softrware-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
   },
   {
     name: "An outdoor cafe",
@@ -26,6 +33,11 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+// const initialProfile = [
+//   { name: "avatar", image: profilePhoto },
+//   { name: "logo", link: profileLogo },
+// ];
 
 //Edit Profile
 const editProfileBtn = document.querySelector(".profile__edit-btn");
