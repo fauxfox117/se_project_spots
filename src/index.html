@@ -14,17 +14,26 @@
       <header class="header">
         <img
           src="<%=require('./images/logo.svg')%>"
-          alt="Black Spots Logo"
+          alt="black spots logo"
           class="header__logo"
         />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/avatar.jpg')%>"
-            alt="Bessie Coleman"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+                src="<%=require('./images/Edit_Avatar.svg')%>"
+                alt="avatar edit icon"
+                class="profile__pencil-icon"
+              />
+            </button>
+            <img
+              src="<%=require('./images/avatar.jpg')%>"
+              alt="Bessie Coleman"
+              class="profile__avatar"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -58,6 +67,26 @@
       <footer class="footer">
         <p class="footer__copyright">2025 &copy; Spots</p>
       </footer>
+      <div class="modal modal_is-opened" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit Avatar</h2>
+          <form class="modal__form">
+            <label for="card-image-input" class="modal__label">
+              Image Link
+              <input
+                id="card-image-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                required
+              />
+              <span id="card-image-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
@@ -146,5 +175,6 @@
         </div>
       </div>
     </div>
+    <!-- <script type="module" src="./pages/index.js"></script> -->
   </body>
 </html>

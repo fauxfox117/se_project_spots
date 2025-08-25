@@ -11,6 +11,34 @@
   border-radius: 8px;
 }
 
+.profile__avatar-container {
+  position: relative;
+}
+
+.profile__avatar-btn {
+  cursor: pointer;
+  position: absolute;
+  background: transparent;
+  border-style: none;
+  border-radius: 8px;
+
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+}
+
+.profile__avatar-btn:hover {
+  transition: 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
+}
+
 .profile__column {
   display: flex;
   flex-direction: column;
@@ -87,6 +115,19 @@
 .profile__add-btn:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.profile__pencil-icon {
+  margin-top: auto;
+  background-color: transparent;
+  border-style: none;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  justify-content: left;
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 627px) {

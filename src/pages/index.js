@@ -1,4 +1,5 @@
 import "./index.css";
+console.log("CSS should be loaded");
 import {
   enableValidation,
   config,
@@ -164,6 +165,7 @@ previewCloseBtn.addEventListener("click", function () {
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
+
   api
     .editUserInfo({
       name: editProfileName.value,
@@ -181,20 +183,20 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  if (!newPostLink.value) {
-    console.log("Please enter a valid URL");
-    return;
-  }
 
-  const cardElement = getCardElement({
-    name: newPostDescription.value,
-    link: newPostLink.value,
-  });
-
-  cardsList.prepend(cardElement);
-  closeModal(newPostModal);
-  newPostForm.reset();
-  disableButton(evt.submitter, config);
+  api
+    .addUserCard({
+      name: newPostDescription.value,
+      link: newPostLink.value,
+    })
+    .then((cardData) => {
+      const cardElement = getCardElement(cardData);
+      cardsList.prepend(cardElement);
+      closeModal(newPostModal);
+      newPostForm.reset();
+      disableButton(evt.submitter, config);
+    })
+    .catch(console.error);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
