@@ -67,21 +67,21 @@
       <footer class="footer">
         <p class="footer__copyright">2025 &copy; Spots</p>
       </footer>
-      <div class="modal modal_is-opened" id="edit-avatar-modal">
+      <div class="modal" id="edit-avatar-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit Avatar</h2>
           <form class="modal__form">
-            <label for="card-image-input" class="modal__label">
-              Image Link
+            <label for="profile-avatar-input" class="modal__label">
+              Profile Picture
               <input
-                id="card-image-input"
+                id="profile-avatar-input"
                 type="url"
                 class="modal__input"
-                placeholder="Paste a link to the picture"
+                placeholder="Paste a link to an image"
                 required
               />
-              <span id="card-image-input-error" class="modal__error"></span>
+              <span id="profile-avatar-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>

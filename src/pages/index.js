@@ -1,5 +1,5 @@
 import "./index.css";
-console.log("CSS should be loaded");
+
 import {
   enableValidation,
   config,
@@ -53,6 +53,8 @@ const editProfileName = editProfileModal.querySelector("#profile-name-input");
 const editProfileDescription = editProfileModal.querySelector(
   "#profile-description-input"
 );
+const editProfilePicture = document.querySelector(".profile__avatar-btn");
+const editProfilePictureModal = document.querySelector("#edit-avatar-modal");
 
 //New Post
 const newPostBtn = document.querySelector(".profile__add-btn");
@@ -180,6 +182,10 @@ function handleEditProfileSubmit(evt) {
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+
+editProfilePicture.addEventListener("click", function () {
+  openModal(editProfilePictureModal);
+});
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
