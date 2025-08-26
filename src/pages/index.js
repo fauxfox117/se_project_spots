@@ -53,8 +53,18 @@ const editProfileName = editProfileModal.querySelector("#profile-name-input");
 const editProfileDescription = editProfileModal.querySelector(
   "#profile-description-input"
 );
-const editProfilePicture = document.querySelector(".profile__avatar-btn");
-const editProfilePictureModal = document.querySelector("#edit-avatar-modal");
+
+//Avatar Form
+const editAvatarPicture = document.querySelector(".profile__avatar-btn");
+const avatarPictureModal = document.querySelector("#edit-avatar-modal");
+const avatarPictureCloseBtn =
+  avatarPictureModal.querySelector(".modal__close-btn");
+const avatarPictureForm = avatarPictureModal.querySelector(".modal__form");
+const avatarPictureLink = avatarPictureModal.querySelector(
+  "#profile-avatar-input"
+);
+const avatarPictureSubmitBtn =
+  avatarPictureModal.querySelector(".modal__submit-btn");
 
 //New Post
 const newPostBtn = document.querySelector(".profile__add-btn");
@@ -183,8 +193,8 @@ function handleEditProfileSubmit(evt) {
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
-editProfilePicture.addEventListener("click", function () {
-  openModal(editProfilePictureModal);
+editAvatarPicture.addEventListener("click", function () {
+  openModal(avatarPictureModal);
 });
 
 function handleNewPostSubmit(evt) {

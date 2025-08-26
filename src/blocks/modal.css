@@ -27,6 +27,13 @@
   box-sizing: border-box;
 }
 
+.modal__delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
 .modal__image-container {
   position: relative;
   margin: auto;
@@ -56,6 +63,50 @@
 .modal__close-btn:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.modal__cancel-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  align-items: center;
+  margin-left: 0;
+  margin-top: auto;
+  max-width: 156px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 18px 32px;
+  gap: 8px;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(33, 33, 33, 1);
+  white-space: nowrap;
+  position: relative;
+}
+
+.modal__delete-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  margin-left: 0;
+  margin-top: auto;
+  max-width: 156px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 18px 32px;
+  gap: 8px;
+  border-radius: 8px;
+  background: rgba(255, 101, 101, 1);
+  color: rgba(33, 33, 33, 1);
+  white-space: nowrap;
+  position: relative;
 }
 
 .modal__title {
