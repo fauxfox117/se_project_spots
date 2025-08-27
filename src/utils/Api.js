@@ -1,4 +1,4 @@
-import { data } from "autoprefixer";
+// import { data } from "autoprefixer";
 
 class Api {
   constructor({ baseUrl, headers }) {
@@ -48,6 +48,21 @@ class Api {
     });
   }
 
+  editAvatarPicture(data) {
+    return fetch(`${this._baseUrl}/users/me/avatar`, {
+      method: "PATCH",
+      headers: this._headers,
+      body: JSON.stringify({
+        avatar: data.avatar,
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error ${res.status}`);
+    });
+  }
+
   addUserCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
@@ -66,6 +81,30 @@ class Api {
 
   deleteUserCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
+      method: "DELETE",
+      headers: this._headers,
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
+
+  likeCard(cardId) {
+    return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+      method: "PUT",
+      headers: this._headers,
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
+
+  removeLike(cardId) {
+    return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: "DELETE",
       headers: this._headers,
     }).then((res) => {

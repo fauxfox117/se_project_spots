@@ -174,22 +174,21 @@
           <p class="modal__preview-title">Golden Gate Bridge</p>
         </div>
       </div>
-      <div class="modal modal_is-opened" id="delete-picture-modal">
+      <div class="modal" id="delete-picture-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
-          <h2 class="modal__title">
+          <button type="button" class="modal__delete-close-btn"></button>
+          <h2 class="modal__delete-title">
             Are you sure you want to delete this image?
           </h2>
-          <form class="modal__delete-container">
-            <button type="delete" class="modal__delete-btn">Delete</button>
-            <button type="cancel" class="modal__cancel-btn">Save</button>
+          <div class="modal__delete-container">
+            <button type="submit" class="modal__delete-btn">Delete</button>
+            <button type="submit" class="modal__cancel-btn">Cancel</button>
 
               <span id="profile-avatar-input-error" class="modal__error"></span>
             </label>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-    <!-- <script type="module" src="./pages/index.js"></script> -->
   </body>
 </html>
