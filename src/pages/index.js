@@ -59,9 +59,12 @@ const editProfileName = editProfileModal.querySelector("#profile-name-input");
 const editProfileDescription = editProfileModal.querySelector(
   "#profile-description-input"
 );
+const editProfileSubmitBtn =
+  editProfileModal.querySelector(".modal__submit-btn");
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
+  editProfileSubmitBtn.textContent = "Saving...";
 
   api
     .editUserInfo({
@@ -73,7 +76,10 @@ function handleEditProfileSubmit(evt) {
       profileDescriptionEl.textContent = data.about;
       closeModal(editProfileModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      editProfileSubmitBtn.textContent = "Save";
+    });
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -112,6 +118,8 @@ const avatarPictureSubmitBtn =
 function handleAvatarPictureSubmit(evt) {
   evt.preventDefault();
 
+  avatarPictureSubmitBtn.textContent = "Saving...";
+
   api
     .editAvatarPicture({
       avatar: avatarPictureLink.value,
@@ -121,7 +129,10 @@ function handleAvatarPictureSubmit(evt) {
       closeModal(avatarPictureModal);
       avatarPictureForm.reset();
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      avatarPictureSubmitBtn.textContent = "Save";
+    });
 }
 
 editAvatarPicture.addEventListener("click", function () {
@@ -144,10 +155,11 @@ const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostLink = newPostModal.querySelector("#card-image-input");
 const newPostDescription = newPostModal.querySelector("#card-caption-input");
-const newSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
+  newPostSubmitBtn.textContent = "Saving...";
 
   api
     .addUserCard({
@@ -161,7 +173,10 @@ function handleNewPostSubmit(evt) {
       newPostForm.reset();
       disableButton(evt.submitter, config);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      newPostSubmitBtn.textContent = "Save";
+    });
 }
 
 newPostBtn.addEventListener("click", function () {
@@ -184,13 +199,18 @@ const deleteModalBtn = deleteModal.querySelector(".modal__delete-btn");
 const deleteCancelBtn = deleteModal.querySelector(".modal__cancel-btn");
 
 function handleDeleteCard(cardId, evt) {
+  deleteModalBtn.textContent = "Deleting...";
+
   api
     .deleteUserCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
       closeModal(deleteModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      deleteModalBtn.textContent = "Delete";
+    });
 }
 
 deleteModal.addEventListener("submit", handleDeleteCard);
