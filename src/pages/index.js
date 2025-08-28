@@ -184,9 +184,6 @@ const deleteModalBtn = deleteModal.querySelector(".modal__delete-btn");
 const deleteCancelBtn = deleteModal.querySelector(".modal__cancel-btn");
 
 function handleDeleteCard(cardId, evt) {
-  console.log("Selected Card ID:", selectedCardId);
-  // evt.preventDefault();
-
   api
     .deleteUserCard(selectedCardId)
     .then(() => {
@@ -199,8 +196,6 @@ function handleDeleteCard(cardId, evt) {
 deleteModal.addEventListener("submit", handleDeleteCard);
 
 deleteModalBtn.addEventListener("click", function () {
-  console.log("MODAL Delete button clicked!");
-  console.log("selectedCardId when deleting:", selectedCardId);
   handleDeleteCard();
 });
 
