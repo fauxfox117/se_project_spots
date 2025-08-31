@@ -128,6 +128,7 @@ function handleAvatarPictureSubmit(evt) {
       avatarProfile.src = data.avatar;
       closeModal(avatarPictureModal);
       avatarPictureForm.reset();
+      disableButton(evt.submitter, config);
     })
     .catch(console.error)
     .finally(() => {
@@ -257,6 +258,12 @@ function getCardElement(data) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
+
+  if (data.isLiked) {
+    cardLikeBtn.classList.add("card__like-btn-active");
+  } else {
+    cardLikeBtn.classList.remove("card__like-btn-active");
+  }
 
   cardLikeBtn.addEventListener("click", function () {
     handleLikeCard(cardLikeBtn, data._id);

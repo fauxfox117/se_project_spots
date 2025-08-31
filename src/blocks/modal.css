@@ -172,7 +172,7 @@
   line-height: 1;
   height: 52px;
   border-radius: 8px;
-  border-color: rgba(33, 33, 33, 0.4);
+  border: 1px solid rgba(33, 33, 33, 0.4);
   outline: none;
   box-sizing: border-box;
   padding: 16px 12px;
